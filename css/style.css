@@ -1,0 +1,120 @@
+html, body{
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+/* Login */
+
+.icon-login{
+    min-width: 150px;
+}
+
+/* Accordion custom styles*/
+
+.accordion-button, .accordion-button:not(.collapsed){
+    color: #212529;
+    background-color: transparent;
+}
+
+.accordion-button:after, .accordion-button:not(.collapsed)::after{
+    content: none;
+}
+
+.accordion-button:focus, .accordion-button:not(.collapsed):focus{
+    border-color: transparent;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.accordion-button{
+    padding: 0.44rem 0.75rem;
+    line-height: 1.5;
+}
+
+.accordion-item{
+    border: 1px solid #ced4da;
+}
+
+/* Calendar custom */
+
+.calendar-responsive-grid-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-responsive-grid{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.calendar-responsive-grid-td{  
+    width: 100%;
+    display: flex;
+}
+
+.fc .fc-button-primary.fc-prev-button, .fc .fc-button-primary.fc-next-button{
+    background: transparent;
+    color: inherit;
+}
+
+.fc-daygrid-event {
+    position: relative;
+    white-space: normal;
+}
+
+@media (max-width: 767px) {
+    .fc .fc-daygrid-day-top{
+        flex-direction: row;
+    }
+    .fc .fc-toolbar{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .fc-toolbar-chunk{
+        margin-bottom: 1rem;
+    }
+    .fc-toolbar-chunk:last-of-type{
+        margin-bottom: 0rem;
+    }
+    .fc .fc-view-harness{
+        min-height: 500px;
+    }
+}
+
+@media (min-width: 768px) {
+    .fc-daygrid-day{
+        max-height: 100px;
+    }
+
+    .fc-daygrid-day-frame{
+        max-height: 100px; 
+    }
+}
+
+/* drag and drop */
+
+.list-group{
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+.list-group-item{
+    cursor: grab;
+}
+.list-group-item:active{
+    cursor: grabbing;
+}
+
+/* Utilities */
+
+.hidden{
+    display: none!important;
+}
